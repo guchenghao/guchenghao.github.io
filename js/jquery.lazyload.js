@@ -13,7 +13,7 @@
     if (typeof define === 'function' && define.amd) {
         define(['jquery'], factory);
     } else {
-        factory(root['jQuery']);
+        factory(root["jquery"]);
     }
 }(this, function ($) {
 
@@ -36,7 +36,7 @@
              */
             var imgload = function (e, target) {
                 //todo: 上报
-            }
+            };
 
             /**
              * @description src失效
@@ -61,7 +61,7 @@
                 var tempDom = target.clone().addClass("lazy-loding").insertBefore(target);
                 tempDom[0].src = "/img/img-loading.png";
                 target.hide();
-            }
+            };
             /**
              * @description src替换，loading过程中添加类lazy-loading;
              */
@@ -82,7 +82,7 @@
                         ctx1.drawImage(image,0,0);
                         imageData = ctx1.getImageData(0,0,500,250);
                         console.log(imageData);
-                    }
+                    };
 
                 }else{
                     tempImg(target);
@@ -95,10 +95,10 @@
                         target.parent().find(".lazy-loding").remove();
                         target.show();
                         imgload(e, target);
-                    }
+                    };
                     target[0].src = src;
                 }
-            }
+            };
 
             /**
              * @description 重组
