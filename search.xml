@@ -3,6 +3,230 @@
   
   
     
+    <entry>
+      <title><![CDATA[Selenium]]></title>
+      <url>http://yoursite.com/2016/07/31/Selenium/</url>
+      <content type="html"><![CDATA[<h2 id="Selenium_u7684_u7B80_u4ECB"><a href="#Selenium_u7684_u7B80_u4ECB" class="headerlink" title="Selenium的简介"></a>Selenium的简介</h2><p>Selenium 是 thoughtworks公司的一个集成测试的强大工具 <a href="http://seleniumhq.org/" title="Selenium官网" target="_blank" rel="external">Selenium</a>,他又几个部分，Selenium IDE是一个录制工具，他可以录制操作，并且可以自动产生各种语言的代码，<strong>Selenium IDE是一个FireFox插件，目前只能运行在FireFox浏览器</strong></p>
+<p><img src="http://docs.seleniumhq.org/docs/_images/chapt3_img01_IDE_Installation.png" alt="Selenium下载"></p>
+<hr>
+<h2 id="Selenium_u7684_u5B89_u88C5_u4EE5_u53CA_u57FA_u672C_u4F7F_u7528"><a href="#Selenium_u7684_u5B89_u88C5_u4EE5_u53CA_u57FA_u672C_u4F7F_u7528" class="headerlink" title="Selenium的安装以及基本使用"></a>Selenium的安装以及基本使用</h2><blockquote>
+<p>主要参考<a href="http://docs.seleniumhq.org/docs/02_selenium_ide.jsp" title="Selenium的官方Docs" target="_blank" rel="external">Selenium的官方文档</a>（英文好的童鞋可以看看^_^）<br>selenium比较适合进行web的功能测试</p>
+</blockquote>
+<ul>
+<li>IDE：下载selenium，可以去Selenium的官网下载，也可以到火狐浏览器的附加组件中下载,直接搜索selenium，然后下载Selenium IDE</li>
+</ul>
+<p><img src="http://docs.seleniumhq.org/docs/_images/chapt3_img05_IDE_open.png" alt="Selenium IDE"></p>
+<ul>
+<li>单机版：可以参考<a href="http://www.programgo.com/article/26512391572/" target="_blank" rel="external">selenium+php的本地部署</a>以及<a href="http://blog.csdn.net/e421083458/article/details/8290229" target="_blank" rel="external">phpnuit+slenium的部署</a></li>
+<li>下载了之后，Selenium IDE 主要由以下几部分组成：<ul>
+<li>Base URL ：这一栏是用来填写测试时所使用的页面的url<ul>
+<li>ToolBar：提供了一套测试用的按钮，在最右边的红色按钮，是录制按钮，点击之后，可以进行脚本的录制</li>
+<li>Test Case Pane：是一个表格型的面板，有三个head，分别是<strong>command、target、value</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>在面板下面，有一个用于选择命令的一组控件，可以选择命令以及相应的target，同时也可以设置value的值，一般在测试用例自动运行时使用</p>
+<p><img src="http://docs.seleniumhq.org/docs/_images/chapt3_img16_Table_Format.png" alt="Test Pane"></p>
+<ul>
+<li><p>Log/Reference/UI-Element/Rollup Pane：</p>
+<ol>
+<li>log ：是运行时输出日志，可以在里面查看每行运行的状况</li>
+<li><p>Reference：可以查看Selenium测试中command的api相关信息</p>
+<p><img src="http://docs.seleniumhq.org/docs/_images/chapt3_img18_Bottom_Box.png" alt="Log"></p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="Selenium_u7684_u4E2D_u6587_u624B_u518C"><a href="#Selenium_u7684_u4E2D_u6587_u624B_u518C" class="headerlink" title="Selenium的中文手册"></a>Selenium的中文手册</h2><blockquote>
+<p>学习Selenium工具之前，需要一定的path的知识，学习path可以去W3CSchool的官网进行学习，也可以参考<a href="http://www.cnblogs.com/jianjialin/archive/2009/02/01/1382056.html" target="_blank" rel="external">xpath学习</a></p>
+</blockquote>
+<h3 id="Commands__28_u547D_u4EE4_29"><a href="#Commands__28_u547D_u4EE4_29" class="headerlink" title="Commands (命令)"></a>Commands (命令)</h3><ul>
+<li>Action<br>  对当前状态进行操作<br>  失败时，停止测试</li>
+<li>Assertion<br>  校验是否有产生正确的值</li>
+<li>Element Locators<br>  指定HTML中的某元素</li>
+<li>Patterns<br>  用于模式匹配</li>
+</ul>
+<ul>
+<li>Element Locators (元素定位器)<ul>
+<li>id=id<br>  id locator 指定HTML中的唯一id的元素</li>
+<li>name=name<br>  name locator指定 HTML中相同name的元素中的第一个元素</li>
+<li>identifier=id<br>  identifier locator 首先查找HTML是否存在该id的元素, 若不存在，查找第一个该name的元素</li>
+<li>dom=javascriptExpression<br>  dom locator用JavaScript表达式来定位HTML中的元素,注意必须要以”document”开头<br>  例如:<br>  dom=document.forms<a href="">‘myForm’</a>.myDropdown<br>  dom=document.images<a href="">56</a></li>
+<li>xpath=xpathExpression<br>  xpath locator用 XPath 表达式来定位HTML中的元素,必须注意要以”//“开头<br>  例如：<br>  xpath=//img<a href="">@alt=’The image alt text’</a><br>  xpath=//table<a href="">@id=’table1’</a>//tr<a href="">4</a>/td<a href="">2</a></li>
+<li>link=textPattern<br>  link locator 用<strong>link来选择HTML中的连接或锚元素</strong><br>  例如:<br>  link=The link text</li>
+<li>在没有locator前序的情况下 Without a locatorprefix,Selenium uses:<br>  如果以”document.”开头，则默认是使用 dom locator，如果是以”//“开头，则默认使用xpath locator,其余情况均认作identifier locator</li>
+</ul>
+</li>
+<li>String Matching Patterns (字符串匹配模式)<ul>
+<li>glob:patthern<br>  <strong>glob模式</strong>，用通配符“*”代表任意长度字符，”?”代表一个字符</li>
+<li>regexp:regexp<br>  <strong>正则表达式模式</strong>，用JavaScript正则表达式的形式匹配字符串</li>
+<li>exact:string<br>  <strong>精确匹配模式</strong>，精确匹配整个字符串，不能用通配符，在没有指定字符串匹配前序的时候，selenium 默认使用golb 匹配模式</li>
+</ul>
+</li>
+<li>Select Option Specifiers (Select选项指定器)<ul>
+<li>label=labelPattern<br>  通过匹配选项中的文本指定选项<br>  例如：label=regexp:^<a href="">Oo</a>ther</li>
+<li>value=valuePattern<br>  通过匹配选项中的值指定选项<br>  例如：value=other</li>
+<li>id=id<br>  通过匹配选项的id指定选项<br>  例如: id=option1</li>
+<li>index=index<br>  通过匹配选项的序号指定选项，序号从0开始<br>  例如：index=2<br>  在没有选项选择前序的情况下，默认是匹配选项的文本<h3 id="Actions"><a href="#Actions" class="headerlink" title="Actions"></a>Actions</h3>描述了用户所会作出的操作。<br>Action 有两种形式: action和actionAndWait, action会立即执行，而actionAndWait会假设需要较长时间才能得到该action的相响，而作出等待，open则是会自动处理等待时间。</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>click<br>  click(elementLocator)</p>
+<ul>
+<li>点击连接,按钮，复选和单选框</li>
+<li>如果点击后需要等待响应，则用”clickAndWait”</li>
+<li>如果是需要经过JavaScript的alert或confirm对话框后才能继续操作，则需要调用verify或assert来告诉Selenium你期望对对话框进行什么操作。  <ul>
+<li>open<br>open(url)</li>
+</ul>
+<ul>
+<li>在浏览器中打开URL,可以接受相对和绝对路径两种形式</li>
+<li>注意：该URL必须在与浏览器相同的安全限定范围之内</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>type<br> type(inputLocator, value)</p>
+<ul>
+<li>模拟人手的输入过程，往指定的input中输入值</li>
+<li>也适合给复选和单选框赋值</li>
+<li>在这个例子中，则只是给钩选了的复选框赋值，注意，而不是改写其文本</li>
+</ul>
+</li>
+<li><p>select<br> select(dropDownLocator, optionSpecifier)</p>
+<ul>
+<li>根据optionSpecifier选项选择器来选择一个下拉菜单选项</li>
+<li>如果有多于一个选择器的时候，如在用通配符模式，如”fb”,或者超过一个选项有相同的文本或值，则会选择第一个匹配到的值</li>
+</ul>
+</li>
+<li><p>selectWindow<br> select(windowId)</p>
+<ul>
+<li>选择一个弹出窗口</li>
+<li>当选中那个窗口的时候，所有的命令将会转移到那窗口中执行</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>pause<br>  pause(millisenconds)<ul>
+<li>根据指定时间暂停Selenium脚本执行</li>
+<li>常用在调试脚本或等待服务器段响应时       <ul>
+<li>fireEvent<br>fireEvent(elementLocatore,evenName)<br>模拟页面元素事件被激活的处理动作</li>
+<li>waitForCondition<br>waitForCondition(JavaScriptSnippet,time)</li>
+</ul>
+<ul>
+<li>在限定时间内，等待一段JavaScript代码返回true值，超时则停止等待</li>
+</ul>
+<ul>
+<li>waitForCondition<br>var value=selenium.getText(“foo”); value.match(/bar/);<br>3000</li>
+<li>waitForValue<br>waitForValue(inputLocator, value)</li>
+</ul>
+</li>
+<li>等待某input(如hidden input)被赋予某值，<ul>
+<li>会轮流检测该值，所以要注意如果该值长时间一直不赋予该input该值的话，可能会导致阻塞       </li>
+</ul>
+<ul>
+<li>store,stroreValue<br>store(valueToStore, variablename)<br>保存一个值到变量里。<br>该值可以由自其他变量组合而成或通过JavaScript表达式赋值给变量</li>
+<li>storeText, storeAttribute<br>storeText(elementLocator, variablename)<br>把指定元素的文本值赋予给变量<br>$.｛expectedStartDate｝<br>storeAttribute(.｛｝elementLocator@attributeName,variableName.｛｝)<br>把指定元素的属性的值赋予给变量</li>
+<li>chooseCancel.., answer..<br>chooseCancelOnNextConfirmation()</li>
+</ul>
+<ul>
+<li>当下次JavaScript弹出confirm对话框的时候,让selenium选</li>
+</ul>
+<ul>
+<li>Cancel</li>
+</ul>
+</li>
+<li>如果没有该命令时，遇到confirm对话框Selenium默认返回true，如手动选择OK按钮一样<br>-如果已经运行过该命令，当下一次又有confirm对话框出现时，也会同样地再次选择Cancel<br>answerOnNextPrompt(answerString)  <ul>
+<li>在下次JavaScript弹出prompt提示框时，赋予其anweerString的值，并选择确定</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Assertions"><a href="#Assertions" class="headerlink" title="Assertions"></a>Assertions</h3><p>允许用户去检查当前状态。两种模式: Assert 和 Verify， 当Assert失败，则退出测试；当Verify失败，测试会继续运行。</p>
+<ul>
+<li>assertLocation, assertTitle<br>  assertLocation(relativeLocation)<br>  判断当前是在正确的页面<br>  assertTitle(titlePattern)<br>  检查当前页面的title是否正确</li>
+<li><p>assertValue<br>   assertValue(inputLocator, valuePattern)</p>
+<ul>
+<li>检查input的值</li>
+<li>对于 checkbox或radio，如果已选择，则值为”on”,反之为”off”<ul>
+<li>assertSelected, assertSelectedOptions<br>assertSelected(selectLocator, optionSpecifier)<br>检查select的下拉菜单中选中的选型是否和optionSpecifer(Select选择选项器)的选项相同</li>
+<li>assertSelectOptions(selectLocator, optionLabelList)</li>
+</ul>
+<ul>
+<li>检查下拉菜单中的选项的文本是否和optionLabelList相同</li>
+</ul>
+</li>
+<li>optionLabelList是以逗号分割的一个字符串</li>
+</ul>
+<ul>
+<li>assertText<br> assertText(elementLocator,textPattern)<ul>
+<li>检查指定元素的文本<ul>
+<li>只对有包含文本的元素生效</li>
+<li>对于Mozilla类型的浏览器，用textContent取元素的文本，对于IE类型的浏览器，用innerText取元素文本</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>assertTextPresent, assertAttribute<br>assertTextPresent(text)<br>检查在当前给用户显示的页面上是否有出现指定的文本</p>
+</li>
+<li><p>assertAttribute(.｛｝elementLocator@attributeName.｛｝, ValuePattern)<br> 检查当前指定元素的属性的值</p>
+</li>
+<li><p>assertTable<br> assertTable(cellAddress, valuePattern)</p>
+<ul>
+<li>检查table里的某个cell中的值</li>
+<li>cellAddress的语法是tableName.row.column, 注意行列序号都是从0开始</li>
+</ul>
+</li>
+<li><p>assertVisible, nonVisible<br>assertVisible(elementLocator)</p>
+<ul>
+<li>检查指定的元素是否可视的</li>
+<li>隐藏一个元素可以用设置css的’visibility’属性为’hidden’，也可以设置’display’属性为’none’</li>
+</ul>
+</li>
+<li><p>assertEditable(inputLocator)<br>检查指定的input是否可以编辑</p>
+</li>
+</ul>
+</li>
+<li><p>assertNotEditable(inputLocator)<br>  检查指定的input是否不可以编辑</p>
+</li>
+<li>assertAlert<br>  assertAlert(messagePattern)<ul>
+<li>检查JavaScript是否有产生带指定message的alert对话框</li>
+<li>alert产生的顺序必须与检查的顺序一致</li>
+<li>检查alert时会产生与手动点击’OK’按钮一样的效果。如果一个alert产生了，而你却没有去检查它，selenium会在下个action中报错。</li>
+<li>注意：Selenium 不支持 JavaScript 在onload()事件时 调用alert();在这种情况下，Selenium需要你自己手动来点击OK.</li>
+</ul>
+</li>
+<li>assertConfirmation<br>  assertConfirmation(messagePattern)<ul>
+<li>检查JavaScript是否有产生带指定message的confirmation对话框和alert情况一样，confirmation对话框也必须在它们产生的时候进行检查</li>
+<li>默认情况下，Selenium会让confirm() 返回true, 相当于手动点击Ok按钮的效果。你能够通过chooseCancelOnNextConfirmation命令让confirm()返回false.同样地，如果一个cofirmation对话框出现了，但你却没有检查的话，Selenium将会在下个action中报错</li>
+<li>注意：在Selenium的环境下，confirmation对话框框将不会再出现弹出显式对话框</li>
+<li>注意：Selenium不支持在onload()事件时调用confirmation对话框，在这种情况下，会出现显示confirmatioin对话框，并需要你自己手动点击。</li>
+</ul>
+</li>
+<li>assertPrompt<br>  assertPrompt(messagePattern)<ul>
+<li>检查JavaScript是否有产生带指定message的Prompt对话框</li>
+<li>你检查的prompt的顺序Prompt对话框产生的顺序必须相同</li>
+<li>必须在verifyPrompt之前调用answerOnNextPrompt命令</li>
+<li>如果prompt对话框出现了但你却没有检查，则Selenium会在下个action中报错</li>
+</ul>
+</li>
+</ul>
+<h3 id="Parameters_and_Variables"><a href="#Parameters_and_Variables" class="headerlink" title="Parameters and Variables"></a>Parameters and Variables</h3><p>参数和变量的声明范围由简单的赋值到JavaScript表达式赋值。<br>Store，storeValue 和storeText 为下次访问保存值。<br>在Selenium内部是用一个叫storeVars的map来保存变量名。</p>
+<ul>
+<li><p>Variable Substitution 变量替换<br>  提供了一个简单的方法去访问变量,语法 $.｛xxx｝</p>
+<ul>
+<li>JavaScript Evaluation JavaScript赋值<br>  你能用JavaScript来构建任何你所需要的值。<br>  这个参数是以javascript开头，语法是 javascript.｛’with a trailing’｝。<br>  可以通过JavaScript表达式给某元素赋值。</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    </entry>
+    
   
   
 </search>
