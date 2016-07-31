@@ -102,7 +102,7 @@ Selenium的安装以及基本使用
 <meta property="og:image" content="http://ob5vyu5k2.bkt.clouddn.com/chapt3_img05_IDE_open.png">
 <meta property="og:image" content="http://ob5vyu5k2.bkt.clouddn.com/chapt3_img16_Table_Format.png">
 <meta property="og:image" content="http://ob5vyu5k2.bkt.clouddn.com/chapt3_img18_Bottom_Box.png">
-<meta property="og:updated_time" content="2016-07-31T04:20:33.000Z">
+<meta property="og:updated_time" content="2016-07-31T04:22:45.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Selenium">
 <meta name="twitter:description" content="Selenium的简介Selenium 是 thoughtworks公司的一个集成测试的强大工具 Selenium,他又几个部分，Selenium IDE是一个录制工具，他可以录制操作，并且可以自动产生各种语言的代码，Selenium IDE是一个FireFox插件，目前只能运行在FireFox浏览器
@@ -369,7 +369,10 @@ Selenium的安装以及基本使用
 <h2 id="Selenium_u7684_u4E2D_u6587_u624B_u518C"><a href="#Selenium_u7684_u4E2D_u6587_u624B_u518C" class="headerlink" title="Selenium的中文手册"></a>Selenium的中文手册</h2><blockquote>
 <p>学习Selenium工具之前，需要一定的path的知识，学习path可以去W3CSchool的官网进行学习，也可以参考<a href="http://www.cnblogs.com/jianjialin/archive/2009/02/01/1382056.html" target="_blank" rel="external">xpath学习</a></p>
 </blockquote>
-<h3 id="Commands__28_u547D_u4EE4_29"><a href="#Commands__28_u547D_u4EE4_29" class="headerlink" title="Commands (命令)"></a>Commands (命令)</h3><ul>
+<ol>
+<li>Commands (命令)</li>
+</ol>
+<ul>
 <li>Action<br>  对当前状态进行操作<br>  失败时，停止测试</li>
 <li>Assertion<br>  校验是否有产生正确的值</li>
 <li>Element Locators<br>  指定HTML中的某元素</li>
@@ -396,10 +399,13 @@ Selenium的安装以及基本使用
 <li>label=labelPattern<br>  通过匹配选项中的文本指定选项<br>  例如：label=regexp:^<a href="">Oo</a>ther</li>
 <li>value=valuePattern<br>  通过匹配选项中的值指定选项<br>  例如：value=other</li>
 <li>id=id<br>  通过匹配选项的id指定选项<br>  例如: id=option1</li>
-<li>index=index<br>  通过匹配选项的序号指定选项，序号从0开始<br>  例如：index=2<br>  在没有选项选择前序的情况下，默认是匹配选项的文本<h3 id="Actions"><a href="#Actions" class="headerlink" title="Actions"></a>Actions</h3>描述了用户所会作出的操作。<br>Action 有两种形式: action和actionAndWait, action会立即执行，而actionAndWait会假设需要较长时间才能得到该action的相响，而作出等待，open则是会自动处理等待时间。</li>
+<li>index=index<br>  通过匹配选项的序号指定选项，序号从0开始<br>  例如：index=2<br>  在没有选项选择前序的情况下，默认是匹配选项的文本</li>
 </ul>
 </li>
 </ul>
+<ol>
+<li>Actions<br>描述了用户所会作出的操作。<br>Action 有两种形式: action和actionAndWait, action会立即执行，而actionAndWait会假设需要较长时间才能得到该action的相响，而作出等待，open则是会自动处理等待时间。</li>
+</ol>
 <ul>
 <li><p>click<br>  click(elementLocator)</p>
 <ul>
@@ -474,7 +480,9 @@ Selenium的安装以及基本使用
 </ul>
 </li>
 </ul>
-<h3 id="Assertions"><a href="#Assertions" class="headerlink" title="Assertions"></a>Assertions</h3><p>允许用户去检查当前状态。两种模式: Assert 和 Verify， 当Assert失败，则退出测试；当Verify失败，测试会继续运行。</p>
+<ol>
+<li>Assertions<br>允许用户去检查当前状态。两种模式: Assert 和 Verify， 当Assert失败，则退出测试；当Verify失败，测试会继续运行。</li>
+</ol>
 <ul>
 <li>assertLocation, assertTitle<br>  assertLocation(relativeLocation)<br>  判断当前是在正确的页面<br>  assertTitle(titlePattern)<br>  检查当前页面的title是否正确</li>
 <li><p>assertValue<br>   assertValue(inputLocator, valuePattern)</p>
@@ -543,7 +551,9 @@ Selenium的安装以及基本使用
 </ul>
 </li>
 </ul>
-<h3 id="Parameters_and_Variables"><a href="#Parameters_and_Variables" class="headerlink" title="Parameters and Variables"></a>Parameters and Variables</h3><p>参数和变量的声明范围由简单的赋值到JavaScript表达式赋值。<br>Store，storeValue 和storeText 为下次访问保存值。<br>在Selenium内部是用一个叫storeVars的map来保存变量名。</p>
+<ol>
+<li>Parameters and Variables<br>参数和变量的声明范围由简单的赋值到JavaScript表达式赋值。<br>Store，storeValue 和storeText 为下次访问保存值。<br>在Selenium内部是用一个叫storeVars的map来保存变量名。</li>
+</ol>
 <ul>
 <li><p>Variable Substitution 变量替换<br>  提供了一个简单的方法去访问变量,语法 $.｛xxx｝</p>
 <ul>
@@ -745,7 +755,7 @@ Selenium的安装以及基本使用
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Selenium_u7684_u7B80_u4ECB"><span class="nav-number">1.</span> <span class="nav-text">Selenium的简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Selenium_u7684_u5B89_u88C5_u4EE5_u53CA_u57FA_u672C_u4F7F_u7528"><span class="nav-number">2.</span> <span class="nav-text">Selenium的安装以及基本使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Selenium_u7684_u4E2D_u6587_u624B_u518C"><span class="nav-number">3.</span> <span class="nav-text">Selenium的中文手册</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Commands__28_u547D_u4EE4_29"><span class="nav-number">3.1.</span> <span class="nav-text">Commands (命令)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Actions"><span class="nav-number">3.2.</span> <span class="nav-text">Actions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Assertions"><span class="nav-number">3.3.</span> <span class="nav-text">Assertions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Parameters_and_Variables"><span class="nav-number">3.4.</span> <span class="nav-text">Parameters and Variables</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Selenium_u7684_u7B80_u4ECB"><span class="nav-number">1.</span> <span class="nav-text">Selenium的简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Selenium_u7684_u5B89_u88C5_u4EE5_u53CA_u57FA_u672C_u4F7F_u7528"><span class="nav-number">2.</span> <span class="nav-text">Selenium的安装以及基本使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Selenium_u7684_u4E2D_u6587_u624B_u518C"><span class="nav-number">3.</span> <span class="nav-text">Selenium的中文手册</span></a></li></ol></div>
             
           </div>
         </section>
