@@ -4,7 +4,7 @@
   
     
     <entry>
-      <title><![CDATA[Selenium]]></title>
+      <title><![CDATA[Selenium使用手册]]></title>
       <url>http://yoursite.com/2016/07/31/Selenium/</url>
       <content type="html"><![CDATA[<h2 id="Selenium_u7684_u7B80_u4ECB"><a href="#Selenium_u7684_u7B80_u4ECB" class="headerlink" title="Selenium的简介"></a>Selenium的简介</h2><p>Selenium 是 thoughtworks公司的一个集成测试的强大工具 <a href="http://seleniumhq.org/" title="Selenium官网" target="_blank" rel="external">Selenium</a>,他又几个部分，Selenium IDE是一个录制工具，他可以录制操作，并且可以自动产生各种语言的代码，<strong>Selenium IDE是一个FireFox插件，目前只能运行在FireFox浏览器</strong></p>
 <p><img src="http://ob5vyu5k2.bkt.clouddn.com/chapt3_img01_IDE_Installation.png" alt="Selenium下载"></p>
