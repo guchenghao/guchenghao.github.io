@@ -4,6 +4,16 @@
   
     
     <entry>
+      <title><![CDATA[2015-2016年暑期实习感想]]></title>
+      <url>http://yoursite.com/2016/08/06/2015-2016%E5%B9%B4%E5%AE%9E%E4%B9%A0%E6%84%9F%E6%83%B3/</url>
+      <content type="html"><![CDATA[<h2 id="u5B9E_u4E60_u60C5_u51B5_u8BF4_u660E"><a href="#u5B9E_u4E60_u60C5_u51B5_u8BF4_u660E" class="headerlink" title="实习情况说明"></a>实习情况说明</h2><h2 id="u4E2A_u4EBA_u611F_u60F3"><a href="#u4E2A_u4EBA_u611F_u60F3" class="headerlink" title="个人感想"></a>个人感想</h2><blockquote>
+<p>本人是一个菜鸟,渴望变成大神</p>
+</blockquote>
+<p>其实刚去公司的时候，我有点害怕和羞涩，很多事情都不敢问（在学校因为都是同龄人，所以整个人会感觉到很轻松），在公司我年龄最小，而且都是前辈或者学长（还真的有<strong>同校的学姐</strong>^_^），被别人叫到的时候，整个人就像触电一样（略微尴尬），不过</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Selenium使用手册]]></title>
       <url>http://yoursite.com/2016/07/31/Selenium/</url>
       <content type="html"><![CDATA[<h2 id="Selenium_u7684_u7B80_u4ECB"><a href="#Selenium_u7684_u7B80_u4ECB" class="headerlink" title="Selenium的简介"></a>Selenium的简介</h2><p>Selenium 是 thoughtworks公司的一个集成测试的强大工具 <a href="http://seleniumhq.org/" title="Selenium官网" target="_blank" rel="external">Selenium</a>,他又几个部分，Selenium IDE是一个录制工具，他可以录制操作，并且可以自动产生各种语言的代码，<strong>Selenium IDE是一个FireFox插件，目前只能运行在FireFox浏览器</strong></p>
