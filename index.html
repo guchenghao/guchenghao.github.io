@@ -268,114 +268,6 @@
             
               
                 
-                <a class="post-title-link" href="/2018/03/15/生成模型与判别模型/" itemprop="url">
-                  生成模型与判别模型
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2018-03-15T13:43:05+08:00" content="2018-03-15">
-              2018-03-15
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2018/03/15/生成模型与判别模型/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/03/15/生成模型与判别模型/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="u751F_u6210_u6A21_u578B_u548C_u5224_u522B_u6A21_u578B"><a href="#u751F_u6210_u6A21_u578B_u548C_u5224_u522B_u6A21_u578B" class="headerlink" title="生成模型和判别模型"></a>生成模型和判别模型</h1><h2 id="u751F_u6210_u65B9_u6CD5_u548C_u5224_u522B_u65B9_u6CD5"><a href="#u751F_u6210_u65B9_u6CD5_u548C_u5224_u522B_u65B9_u6CD5" class="headerlink" title="生成方法和判别方法"></a>生成方法和判别方法</h2><p><strong>判别方法:</strong>由数据直接学习<strong>决策函数Y=f(X)或者条件概率分布P(Y|X)</strong>作为预测的模型，即判别模型。基本思想是有限样本条件下建立判别函数，不考虑样本的产生模型，直接研究预测模型。典型的判别模型包括<strong>k近邻，感知机，决策树，支持向量机</strong>等。</p>
-<p><strong>生成方法：</strong>由数据学习联合概率密度分布P(X,Y)，然后求出条件概率分布P(Y|X)作为预测的模型，即生成模型：<strong>P(Y|X)= P(X,Y)/ P(X)</strong>。基本思想是首先建立样本的联合概率概率密度模型P(X,Y)，然后再得到后验概率P(Y|X)，再利用它进行分类，就像上面说的那样。<strong>注意: 这里是先求出P(X,Y)才得到P(Y|X)的，然后这个过程还得先求出P(X)。P(X)就是你的训练数据的概率分布（先验概率）</strong>。哎，刚才说了，需要你的数据样本非常多的时候，你得到的P(X)才能很好的描述你数据真正的分布，典型的生成模型有：<strong>朴素贝叶斯和隐马尔科夫模型等</strong></p>
-<h2 id="u751F_u6210_u65B9_u6CD5_u548C_u5224_u522B_u65B9_u6CD5_u7684_u7279_u70B9"><a href="#u751F_u6210_u65B9_u6CD5_u548C_u5224_u522B_u65B9_u6CD5_u7684_u7279_u70B9" class="headerlink" title="生成方法和判别方法的特点"></a>生成方法和判别方法的特点</h2><p><strong>生成方法的特点：</strong>上面说到，生成方法学习联合概率密度分布P(X,Y)，所以就可以<strong>从统计的角度表示数据的分布情况，能够反映同类数据本身的相似度。但它不关心到底划分各类的那个分类边界在哪</strong>。生成方法可以还原出联合概率分布P(Y|X)，而判别方法不能。生成方法的<strong>学习收敛速度更快</strong>，即当样本容量增加的时候，学到的模型可以更快的收敛于真实模型，<strong>当存在隐变量时，仍可以用生成方法学习。此时判别方法就不能用</strong></p>
-<p><strong>判别方法的特点：</strong>判别方法直接学习的是决策函数Y=f(X)或者条件概率分布P(Y|X)。不能反映训练数据本身的特性。<strong>但它寻找不同类别之间的最优分类面，反映的是异类数据之间的差异</strong>。<strong>直接面对预测，往往学习的准确率更高</strong>。由于直接学习P(Y|X)或P(X)，可以对数据进行各种程度上的抽象、定义特征并使用特征，因此可以简化学习问题</p>
-<h2 id="u6CE8_u610F_uFF08warning_uFF09"><a href="#u6CE8_u610F_uFF08warning_uFF09" class="headerlink" title="注意（warning）"></a>注意（warning）</h2><ol>
-<li>由生成模型可以得到判别模型，但由判别模型得不到生成模型。生成模型可以通过<strong>贝叶斯方法</strong>转化为判别模型</li>
-<li><strong>生成算法尝试去找到底这个数据是怎么生成的（产生的），然后再对一个信号进行分类</strong>。基于你的生成假设，那么那个类别最有可能产生这个信号，这个信号就属于那个类别。<strong>判别模型不关心数据是怎么生成的，它只关心信号之间的差别，然后用差别来简单对给定的一个信号进行分类</strong></li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/2016/07/31/Selenium/" itemprop="url">
                   Selenium使用手册
                 </a>
@@ -714,7 +606,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">1</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
